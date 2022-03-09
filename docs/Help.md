@@ -105,7 +105,7 @@ The features of the application rely on the components below:
 <br/>
 
 ### Runing the simulator
- The simulator is a .NET 6  application.
+ The simulator is a .NET 6 application.
  
  To run the simulator, there are two alternatives:
   1. running the simulator as a **.NET 6 Console application** (selfcontained or depending on an installed framework)
