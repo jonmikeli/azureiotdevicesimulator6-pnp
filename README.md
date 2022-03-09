@@ -16,7 +16,7 @@ Besides the aforementioned simulators, a version implementing [Device Provisioni
 So, both approaches are kept.
 It could be useful thought to add DPS features to the PnP IoT Simulator.
 
-## DTDL
+## DTDL (Sigital Twins Definition Language)
 
 This simulator allows to use [DTDL, Digital Twins Definition Language](https://github.com/Azure/opendigitaltwins-dtdl/blob/master/DTDL/v2/dtdlv2.md) models. These models describe the device capabilities via the next concepts:
  - components
