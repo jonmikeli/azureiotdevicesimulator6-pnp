@@ -1,0 +1,30 @@
+{
+  "connectionString": "TO BE REPLACED",
+  "defaultModelId": "dtmi:com:example:thermostat;1",
+  "supportedModels": [
+    {
+      "modelId": "dtmi:com:example:thermostat;1",
+      "modelPath": "./DTDLModels/thermostat.json",
+      "modelType": "Telemetry"
+    },
+    {
+      "modelId": "dtmi:com:jmi:simulator:devicemessages;1",
+      "modelPath": "./DTDLModels/jmi.simulator.pnp.model.generic3.json",
+      "modelType": "Telemetry"
+    }
+  ],
+  "simulationSettings": {
+    "enableLatencyTests": false,
+    "latencyTestsFrecuency": 30,
+    "enableDevice": true,
+    "enableModules": false,
+    "enableTelemetryMessages": true,
+    "telemetryFrecuency": 10,
+    "enableTwinReportedMessages": false,
+    "twinReportedMessagesFrecuency": 60,
+    "enableReadingTwinProperties": false,
+    "enableC2DDirectMethods": true,
+    "enableC2DMessages": true,
+    "enableTwinPropertiesDesiredChangesNotifications": true
+  }
+}

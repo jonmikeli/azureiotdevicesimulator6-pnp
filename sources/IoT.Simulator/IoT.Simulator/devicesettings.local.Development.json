@@ -1,0 +1,34 @@
+{
+  "connectionString": "HostName=iothubtestsedgepnp.azure-devices.net;DeviceId=simulator5;SharedAccessKey=9PUl2lovvijycVlibTPTbp5lemiI1LX522HbjB587cc=",
+  "defaultModelId": "dtmi:com:example:thermostat;1",
+  "supportedModels": [
+    {
+      "modelId": "dtmi:com:example:thermostat;1",
+      "modelPath": "./Tests/thermostat.json",
+      "modelType": "Telemetry"
+    },
+    {
+      "modelId": "dtmi:com:jmi:simulator:devicemessages;1",
+      "modelPath": "./Tests/jmi.simulator.pnp.model.generic3.json",
+      "modelType": "Telemetry"
+    }
+  ],
+  "simulationSettings": {
+    "enableLatencyTests": false,
+    "latencyTestsFrecuency": 30,
+    "enableDevice": true,
+    "enableModules": false,
+    "enableTelemetryMessages": true,
+    "telemetryFrecuency": 10,
+    "enableErrorMessages": false,
+    "errorFrecuency": 20,
+    "enableCommissioningMessages": false,
+    "commissioningFrecuency": 30,
+    "enableTwinReportedMessages": false,
+    "twinReportedMessagesFrecuency": 60,
+    "enableReadingTwinProperties": false,
+    "enableC2DDirectMethods": true,
+    "enableC2DMessages": true,
+    "enableTwinPropertiesDesiredChangesNotifications": true
+  }
+}

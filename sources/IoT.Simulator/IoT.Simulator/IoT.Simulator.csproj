@@ -1,0 +1,173 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <Configurations>Debug;Release;Development;Production</Configurations>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <Authors>Jon Mikel Inza</Authors>
+    <Company>JMI</Company>
+    <Product>IoT.Simulator.PnP</Product>
+    <Description>IoT simulator covering most of the common functional scenarios (device and module level). This version includes IoT Plug and Play features.</Description>
+    <Copyright>Jon Mikel Inza</Copyright>
+    <PackageTags>iot, simulator, Azure IoT, IoT Hub, docker, device, modules, IoT PnP, DTDL v2, Plug and Play</PackageTags>
+    <AssemblyVersion>0.1.1.0</AssemblyVersion>
+    <FileVersion>0.1.1.0</FileVersion>
+    <Version>0.1.1.0</Version>
+    <PackageId>IoT.Simulator.PnP</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\FileUpload\**" />
+    <EmbeddedResource Remove="Models\FileUpload\**" />
+    <None Remove="Models\FileUpload\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Services\SimulationApp.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.7.0" />
+    <PackageReference Include="Microsoft.Azure.Devices.Client" Version="1.33.1" />
+    <PackageReference Include="Microsoft.Azure.DigitalTwins.Parser" Version="3.12.5" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IoT.DTDL\IoT.DTDL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.Debug.json">
+      <IsTransformFile>true</IsTransformFile>
+      <DependentUpon>appsettings.json</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="appsettings.Development.json">
+      <TransformOnBuild>true</TransformOnBuild>
+      <IsTransformFile>true</IsTransformFile>
+      <DependentUpon>appsettings.json</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="appsettings.json">
+      <TransformOnBuild>true</TransformOnBuild>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="appsettings.Release.json">
+      <IsTransformFile>true</IsTransformFile>
+      <DependentUpon>appsettings.json</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="devicesettings - Copy.Development.json">
+      <TransformOnBuild>true</TransformOnBuild>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>devicesettings.json</DependentUpon>
+      <IsTransformFile>true</IsTransformFile>
+    </None>
+    <None Update="DTDLModels\Components\jmi.simulator.pnp.model.telemetries-type-with-units.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DTDLModels\Components\jmi.simulator.pnp.model.full.withAdditionalItems.mixedTelemetriesInComponents2.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DTDLModels\Components\jmi.simulator.pnp.model.full.withAdditionalItems.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DTDLModels\Components\jmi.simulator.pnp.model.full.withAdditionalItems.mixedTelemetriesInComponents.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DTDLModels\Components\jmi.simulator.pnp.model.full2.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DTDLModels\Components\jmi.simulator.pnp.model.commands.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DTDLModels\Components\jmi.simulator.pnp.model.full.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DTDLModels\Components\jmi.simulator.pnp.model.readableproperties.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DTDLModels\Components\jmi.simulator.pnp.model.telemetries.commands.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DTDLModels\Components\jmi.simulator.pnp.model.telemetries.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DTDLModels\Components\jmi.simulator.pnp.model.telemetries.readableproperties.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DTDLModels\Components\jmi.simulator.pnp.model.telemetries.writableproperties.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DTDLModels\Components\jmi.simulator.pnp.model.writableproperties.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DTDLModels\jmi.simulator.pnp.model.generic4.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DTDLModels\simulator5-1 - Copy.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="modulessettings - Copy.Development.json">
+      <TransformOnBuild>true</TransformOnBuild>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>modulessettings.json</DependentUpon>
+      <IsTransformFile>true</IsTransformFile>
+    </None>
+    <None Update="modulessettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="modulessettings.Development.json">
+      <TransformOnBuild>true</TransformOnBuild>
+      <IsTransformFile>true</IsTransformFile>
+      <DependentUpon>modulessettings.json</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="devicesettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="devicesettings.Development.json">
+      <TransformOnBuild>true</TransformOnBuild>
+      <IsTransformFile>true</IsTransformFile>
+      <DependentUpon>devicesettings.json</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DTDLModels\jmi.simulator.pnp.model.generic.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DTDLModels\jmi.simulator.pnp.model.generic2-errors.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DTDLModels\jmi.simulator.pnp.model.generic2.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DTDLModels\jmi.simulator.pnp.model.generic3.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DTDLModels\simulator5-1 copy.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DTDLModels\simulator5-1.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DTDLModels\thermostat.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties simulationsettings-device_1json__JSONSchema="Settings\JSONSchemas\simulationsettings-device-schema.json" devicesettings_1json__JSONSchema="Settings\JSONSchemas\devicesettings-schema.json" /></VisualStudio></ProjectExtensions>
+
+</Project>
