@@ -4,7 +4,7 @@ This section describes the different artifacts of the solution and how they work
 
 ## Application
 The application consists of:
- - an application console (.NET 5)
+ - an application console (.NET 6)
  - configuration files:
    - [appsettings.json](####appsettings.json) (described below)
    - [devicesettings.json](####devicesettings.json) (described below). It includes the references to the used DTDL models.
@@ -105,11 +105,11 @@ The features of the application rely on the components below:
 <br/>
 
 ### Runing the simulator
- The simulator is a .NET 5  application.
+ The simulator is a .NET 6  application.
  
  To run the simulator, there are two alternatives:
-  1. running the simulator as a **.NET 5 Console application** (selfcontained or depending on an installed framework)
-  1. running the *Docker container* (which contains in turn the .NET 5 binaries, packages and other required prerequisites)
+  1. running the simulator as a **.NET 6 Console application** (selfcontained or depending on an installed framework)
+  1. running the *Docker container* (which contains in turn the .NET 6 binaries, packages and other required prerequisites)
  
  #### Runing .NET Core application
  Run the command below:
