@@ -46,7 +46,7 @@ The concepts integrated in this simulator are:
 DTDL v2 does not allow using more than a schema per model.
 However, some devices may need sending different types of messages.
 To overcome this limitation, the similator may be used with a list of DTDL models.
-Only one model is charged at the time (default model) to keep coherence and integrity.
+Only one model is loaded at a time (default model) to keep coherence and integrity.
 
 
 ## Additional details
@@ -81,13 +81,13 @@ Only one model is charged at the time (default model) to keep coherence and inte
 >  - the device needs to send different types of messages.
 >  - the messages will follow complex formats.
 >  - you do not want implement DTDL models or use IoT Plug and Play features.
->  - DTDL v2 does not allow to implement what you need (ex: different schemas for one single message)
+>  - DTDL v2 does not allow to implement what you need (ex: different schemas for one single message).
 >
 > The IoT PnP simulator is recommended in contexts where:
-> - the DTDL models need to be tested
-> - the IoT Plug and Play flows need to be tested
-> - you already have one or many DTDL models and want to simulate the device fast and easily
-> - you need to integrate your device with IoT solutions (cloud) with IoT Plug and Play capabilities
+> - the DTDL models need to be tested.
+> - the IoT Plug and Play flows need to be tested.
+> - you already have one or many DTDL models and want to simulate the device fast and easily.
+> - you need to integrate your device with IoT solutions (cloud) with IoT Plug and Play capabilities.
 
 <br/>
 
