@@ -5,14 +5,16 @@ This project has for purpose to help IoT developers and testers. The solution is
 This version of the simulator is based on the [regular version of the simulator](https://github.com/jonmikeli/azureiotdevicesimulator6), which in turn, completes the series of simulators created on top of:
  - [.Net Core 2.1](https://github.com/jonmikeli/azureiotdevicesimulator)
  - [.Net Core 3.1](https://github.com/jonmikeli/azureiotdevicesimulator3)
+ - [.Net Core 5.0](https://github.com/jonmikeli/azureiotdevicesimulator5)
 
 
 IoT Plug and Play is meant to facilitate the integration of IoT devices with IoT solutions. It tries to imitate the concept of the already known Plug and Play experience at computers level.
 
-The implementation follows a no-typed approach when it comes to DTDL parsing. The initial purpose was to protect the solution against possible changes in the DTDL definition. A not typed approach is less prone to structural updates when the model evolves frequently. However, DTDL v2 seems quite stable. So, I guess a new implementation following a typed approach would be more appropriate now.
+The implementation follows a no-typed approach when it comes to DTDL parsing. The initial purpose was to protect the solution against possible changes in the DTDL definition. A not typed approach is less prone to structural updates when the model evolves frequently. However, DTDL v2 seems quite stable now (I could even expect a DTDL v3 quite soon). So, I guess a new implementation following a typed approach would be more appropriate now.
 
-Besides the aforementioned simulators, a version implementing [Device Provisioning Service (DPS) features](https://github.com/jonmikeli/azureiotdevicesimulator6-dps) completes the family of simulators.
-
+Besides the aforementioned simulators, a version implementing [Device Provisioning Service (DPS) features](https://github.com/jonmikeli/azureiotdevicesimulator6-dps) completes the family of simulators. This separation between PnP and other simulators is kept since DTDL does not cover some types of needs.
+So, both approaches are kept.
+It could be useful thought to add DPS features to the PnP IoT Simulator.
 
 ## DTDL
 
