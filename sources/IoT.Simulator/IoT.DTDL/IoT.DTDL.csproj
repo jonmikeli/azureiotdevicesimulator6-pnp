@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <Version>0.3.2.0</Version>
+    <TargetFramework>net6.0</TargetFramework>
+    <Version>0.6.2.0</Version>
     <Authors>Jon Mikel Inza</Authors>
     <Description>Basic DTDL v2 reader/parser to help to work in IoT Plug and Play solutions.</Description>
     <Company>JMI</Company>
@@ -10,13 +10,13 @@
     <PackageTags>IoT Plug and Play, IoT PnP, DTDL</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/jonmikeli/azureiotdevicesimulator5-pnp</RepositoryUrl>
-    <AssemblyVersion>0.3.2.0</AssemblyVersion>
-    <FileVersion>0.3.2.0</FileVersion>
+    <AssemblyVersion>0.6.2.0</AssemblyVersion>
+    <FileVersion>0.6.2.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Azure.DigitalTwins.Parser" Version="3.12.5" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Microsoft.Azure.DigitalTwins.Parser" Version="3.12.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
 </Project>
